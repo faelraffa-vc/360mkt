@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXUS — Your Entire Marketing Department, Under One Roof</title>
+<meta name="description" content="Premium 360° marketing agency — strategy, creative, production, media, and growth under one roof.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{display:['Space Grotesk','sans-serif'],body:['Inter','sans-serif']},colors:{accent:{500:'#F97316',600:'#EA580C'}}}}}</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#000;color:#fff;overflow-x:hidden}
+#loader{position:fixed;inset:0;z-index:9999;background:#000;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .5s,visibility .5s}
+#loader.out{opacity:0;visibility:hidden}
+.lb{width:80px;height:2px;background:rgba(255,255,255,.1);margin-top:1.2rem;border-radius:2px;overflow:hidden}
+.lb i{display:block;width:0;height:100%;background:#F97316;animation:lf 1.5s ease forwards}
+@keyframes lf{to{width:100%}}
+.noise{position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.02;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#tc{position:absolute;inset:0;z-index:1;pointer-events:none}
+.rv{opacity:0;transform:translateY(25px);transition:opacity .6s,transform .6s}.rv.on{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+@keyframes mq{to{transform:translateX(-50%)}}.mqt{display:flex;width:max-content;animation:mq 25s linear infinite}
+.fa{max-height:0;overflow:hidden;transition:max-height .4s}.fa.op{max-height:300px}
+.sc{border:1px solid rgba(255,255,255,.05);transition:all .3s}.sc:hover{border-color:rgba(249,115,22,.2);transform:translateY(-2px)}.sc:hover .si{color:#F97316}.si{transition:color .3s}
+.ec{border:1px solid rgba(255,255,255,.05);transition:all .3s}.ec:hover{border-color:rgba(249,115,22,.12);background:rgba(249,115,22,.02)}
+.wc{border:1px solid rgba(255,255,255,.05);transition:all .3s}.wc:hover{border-color:rgba(255,255,255,.08);background:rgba(255,255,255,.02)}
+.vc{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.05);background:#0a0a0a;transition:all .4s}.vc:hover{border-color:rgba(249,115,22,.2);box-shadow:0 16px 50px -12px rgba(249,115,22,.1);transform:translateY(-3px)}
+.vw{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;cursor:pointer;background:#000}
+.vw iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+.pbo{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:5;background:rgba(0,0,0,.3);transition:opacity .3s}.pbo.hid{opacity:0;pointer-events:none}
+.pbc{width:56px;height:56px;border-radius:50%;background:rgba(249,115,22,.9);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(249,115,22,.4);transition:transform .3s}.pbc:hover{transform:scale(1.1)}
+.vinf{padding:1rem 1.25rem;border-top:1px solid rgba(255,255,255,.05)}
+.vlk{text-decoration:none;color:inherit}.vlk:hover h3{color:#F97316}
+.hcr{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}.hcr::-webkit-scrollbar{display:none}
+.htk{display:flex;gap:0;padding:0 1rem 1rem}
+.cg{flex-shrink:0;padding-right:2.5rem}
+.cgl{font-family:'Space Grotesk',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#F97316;margin-bottom:.75rem;padding-left:.25rem;white-space:nowrap}
+.cgv{display:flex;gap:.6rem}
+.hsl{flex-shrink:0;width:clamp(130px,15vw,185px);scroll-snap-align:start}
+.hvd{width:100%;aspect-ratio:9/16;border-radius:10px;overflow:hidden;position:relative;cursor:pointer;border:1px solid rgba(255,255,255,.06);transition:all .4s;background:#0a0a0a}
+.hvd:hover{border-color:rgba(249,115,22,.25);box-shadow:0 10px 30px -6px rgba(249,115,22,.12);transform:translateY(-3px)}
+.hvd img{width:100%;height:100%;object-fit:cover;display:block}
+.hvo{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.25);transition:background .3s}.hvd:hover .hvo{background:rgba(0,0,0,.08)}
+.hps{width:32px;height:32px;border-radius:50%;background:rgba(249,115,22,.85);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(249,115,22,.25);transition:transform .3s}.hvd:hover .hps{transform:scale(1.1)}
+.hvd iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+.pcn{width:1px;height:40px;margin:0 auto;background:linear-gradient(to bottom,rgba(249,115,22,.3),rgba(249,115,22,.05))}
+.bp{background:#F97316;color:#fff;font-weight:500;padding:.75rem 1.6rem;border-radius:9999px;transition:all .3s;display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;border:none;cursor:pointer;text-decoration:none}
+.bp:hover{background:#EA580C;transform:translateY(-1px);box-shadow:0 10px 25px -6px rgba(249,115,22,.4)}
+.bs{background:transparent;color:#fff;font-weight:500;padding:.75rem 1.6rem;border-radius:9999px;border:1px solid rgba(255,255,255,.2);transition:all .3s;display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;cursor:pointer;text-decoration:none}
+.bs:hover{border-color:rgba(249,115,22,.5);color:#F97316}
+.gn{background:rgba(0,0,0,.75);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05)}
+.mm{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.98);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .4s}.mm.op{opacity:1;visibility:visible}
+.mm a{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:500;color:rgba(255,255,255,.5);padding:.3rem 0;transition:color .3s;text-decoration:none}.mm a:hover{color:#F97316}
+.sn{font-variant-numeric:tabular-nums}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#000}::-webkit-scrollbar-thumb{background:rgba(249,115,22,.2);border-radius:3px}
+::selection{background:rgba(249,115,22,.3);color:#fff}
+@media(max-width:640px){.hsl{width:clamp(110px,36vw,155px)}.cgv{gap:.4rem}.cg{padding-right:1.5rem}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}.mqt{animation:none}}
+</style>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<div id="loader"><div class="font-display text-2rem font-semibold tracking-[.3em]">NEXUS</div><div class="lb"><i></i></div></div>
+<nav class="gn fixed top-0 left-0 right-0 z-50"><div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<a href="#" class="font-display text-xl font-semibold tracking-wider">NEXUS</a>
+<div class="hidden md:flex items-center gap-7"><a href="#services" class="text-sm text-white/50 hover:text-white transition-colors font-light">Services</a><a href="#portfolio" class="text-sm text-white/50 hover:text-white transition-colors font-light">Events</a><a href="#social" class="text-sm text-white/50 hover:text-white transition-colors font-light">Social</a><a href="#process" class="text-sm text-white/50 hover:text-white transition-colors font-light">Process</a><a href="#faq" class="text-sm text-white/50 hover:text-white transition-colors font-light">FAQ</a><a href="#contact" class="bp text-sm py-2.5 px-5">Start Discovery</a></div>
+<button id="mtog" class="md:hidden text-white p-2" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+</div></nav>
+<div class="mm" id="mm"><nav class="text-center"><a href="#services" class="ml">Services</a><a href="#portfolio" class="ml">Events</a><a href="#social" class="ml">Social</a><a href="#process" class="ml">Process</a><a href="#faq" class="ml">FAQ</a><a href="#contact" class="ml" style="color:#F97316">Start Discovery</a></nav></div>
+
+<main>
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+<canvas id="tc"></canvas>
+<div class="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
+<p class="font-display text-xs md:text-sm font-medium tracking-[.35em] uppercase text-accent-500 mb-7 he" style="opacity:0;transform:translateY(20px)">360° Marketing Agency</p>
+<h1 class="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.05] tracking-tight mb-7 he" style="opacity:0;transform:translateY(30px)">Your Entire Marketing<br><span class="text-accent-500">Department.</span><br>Under One Roof.</h1>
+<p class="text-base md:text-lg font-light text-white/50 max-w-2xl mx-auto mb-10 leading-relaxed he" style="opacity:0;transform:translateY(30px)">We don't execute pieces of your marketing. We own all of it — strategy, creative, production, media, and growth. One team. One vision. Zero fragmentation.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 he" style="opacity:0;transform:translateY(30px)"><a href="#contact" class="bp">Start Your Discovery <i data-lucide="arrow-right" class="w-4 h-4"></i></a><a href="#portfolio" class="bs">View Our Work <i data-lucide="play" class="w-4 h-4"></i></a></div>
+</div></section>
+
+<section class="py-16 md:py-24 border-y border-white/5"><div class="max-w-5xl mx-auto px-6 text-center rv"><p class="font-display text-2xl md:text-4xl lg:text-5xl font-light tracking-tight leading-snug text-white/80">Stop managing vendors.<br><span class="font-semibold text-white">Start growing your brand.</span></p></div></section>
+
+<section id="services" class="py-20 md:py-28"><div class="max-w-7xl mx-auto px-6">
+<div class="max-w-2xl mb-14 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Capabilities</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4">Every Capability Your Brand Needs</h2><p class="text-sm font-light text-white/50 leading-relaxed">No gaps. No handoffs. A fully integrated team.</p></div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3" id="sg"></div>
+</div></section>
+
+<section id="portfolio" class="py-20 md:py-28 border-t border-white/5"><div class="max-w-7xl mx-auto px-6">
+<div class="max-w-2xl mb-14 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Event Production</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4">Featured Projects</h2></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="vg"></div>
+</div></section>
+
+<section id="social" class="py-20 md:py-28 border-t border-white/5"><div class="max-w-7xl mx-auto">
+<div class="px-6 max-w-2xl mb-10 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Social Media Content</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4">Vertical Content That Stops the Scroll</h2><p class="text-sm font-light text-white/50">Scroll horizontally. Click to play.</p></div>
+<div class="hcr rv" id="hcr"><div class="htk" id="htk"></div></div>
+</div></section>
+
+<section class="py-14 border-y border-white/5"><div class="max-w-7xl mx-auto px-6"><div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center rv d1"><div class="font-display text-4xl md:text-5xl font-semibold text-accent-500 sn" data-t="150">0</div><div class="text-[10px] tracking-[.2em] uppercase text-white/30 mt-2 font-display">Brands Served</div></div>
+<div class="text-center rv d2"><div class="font-display text-4xl md:text-5xl font-semibold text-white sn" data-t="2000">0</div><div class="text-[10px] tracking-[.2em] uppercase text-white/30 mt-2 font-display">Campaigns</div></div>
+<div class="text-center rv d3"><div class="font-display text-4xl md:text-5xl font-semibold text-white sn" data-t="500">0</div><div class="text-[10px] tracking-[.2em] uppercase text-white/30 mt-2 font-display">Videos</div></div>
+<div class="text-center rv d1"><div class="font-display text-4xl md:text-5xl font-semibold text-accent-500 sn" data-t="98">0</div><div class="text-[10px] tracking-[.2em] uppercase text-white/30 mt-2 font-display">Retention %</div></div>
+</div></div></section>
+
+<section id="process" class="py-20 md:py-28"><div class="max-w-4xl mx-auto px-6">
+<div class="text-center mb-14 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Process</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4">A Process Built for Precision</h2></div>
+<div id="ps"></div>
+</div></section>
+
+<section class="py-20 md:py-28 border-t border-white/5"><div class="max-w-7xl mx-auto px-6">
+<div class="max-w-2xl mb-14 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Event Marketing</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4">Events, Fully Produced</h2></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="ep"></div>
+</div></section>
+
+<section class="py-14 border-y border-white/5 overflow-hidden"><div class="relative" aria-hidden="true"><div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black to-transparent z-10"></div><div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black to-transparent z-10"></div><div class="mqt"><div class="flex items-center gap-12 px-6" id="m1"></div><div class="flex items-center gap-12 px-6" id="m2"></div></div></div></section>
+
+<section class="py-20 md:py-28"><div class="max-w-7xl mx-auto px-6">
+<div class="max-w-2xl mb-14 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Why NEXUS</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4">One Agency. Every Capability. Zero Compromise.</h2></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="wg"></div>
+</div></section>
+
+<section id="faq" class="py-20 md:py-28 border-t border-white/5"><div class="max-w-3xl mx-auto px-6">
+<div class="text-center mb-14 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">FAQ</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight">Frequently Asked Questions</h2></div>
+<div class="space-y-2 rv" id="fl"></div>
+</div></section>
+
+<section id="contact" class="relative py-24 md:py-36 overflow-hidden"><div class="absolute inset-0 bg-gradient-to-b from-transparent via-accent-500/[.03] to-transparent"></div><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-accent-500/[.04] blur-[100px]"></div>
+<div class="relative z-10 max-w-3xl mx-auto px-6 text-center rv">
+<p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-4 font-display">Let's Begin</p>
+<h2 class="font-display text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight leading-[1.1] mb-6">Ready to Stop Managing Marketing<br>and Start Growing?</h2>
+<p class="text-base font-light text-white/50 leading-relaxed mb-9 max-w-xl mx-auto">Schedule a discovery meeting. Let us show you what happens when your entire communication ecosystem is handled by one exceptional team.</p>
+<a href="mailto:hello@nexus.agency" class="bp text-base py-4 px-10">Schedule Your Discovery Meeting <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+<p class="mt-4 text-xs text-white/20">No commitment. No pressure. Just a conversation.</p>
+</div></section>
+</main>
+
+<footer class="border-t border-white/5 py-12"><div class="max-w-7xl mx-auto px-6"><div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div class="md:col-span-2"><a href="#" class="font-display text-2xl font-semibold tracking-wider">NEXUS</a><p class="mt-3 text-xs font-light text-white/40 leading-relaxed max-w-sm">Your entire marketing department, under one roof.</p></div>
+<div><h4 class="font-display text-[10px] tracking-[.2em] uppercase text-white/30 font-medium mb-3">Navigation</h4><ul class="space-y-2"><li><a href="#services" class="text-xs text-white/50 hover:text-accent-500 transition-colors">Services</a></li><li><a href="#portfolio" class="text-xs text-white/50 hover:text-accent-500 transition-colors">Events</a></li><li><a href="#social" class="text-xs text-white/50 hover:text-accent-500 transition-colors">Social</a></li><li><a href="#faq" class="text-xs text-white/50 hover:text-accent-500 transition-colors">FAQ</a></li></ul></div>
+<div><h4 class="font-display text-[10px] tracking-[.2em] uppercase text-white/30 font-medium mb-3">Contact</h4><ul class="space-y-2"><li><a href="mailto:hello@nexus.agency" class="text-xs text-white/50 hover:text-accent-500 transition-colors">hello@nexus.agency</a></li><li><span class="text-xs text-white/50">New York · LA · London</span></li></ul></div>
+</div><div class="border-t border-white/5 pt-6 text-center"><p class="text-[10px] text-white/20">© 2025 NEXUS. All rights reserved.</p></div></div></footer>
+
+<script>
+var SV=[{i:'compass',n:'Brand Strategy',d:'Positioning, messaging, identity systems.'},{i:'target',n:'Marketing Strategy',d:'Data-informed roadmaps aligned with objectives.'},{i:'palette',n:'Creative Direction',d:'Visionary creative leadership for your brand.'},{i:'video',n:'Video Production',d:'Commercials, films, reels, social content.'},{i:'camera',n:'Photography',d:'Product, portrait, event, architectural.'},{i:'megaphone',n:'Social Media',d:'Calendars, engagement, stories, reels, growth.'},{i:'trending-up',n:'Paid Advertising',d:'Meta, Google, TikTok, LinkedIn — ROI optimized.'},{i:'zap',n:'Performance Marketing',d:'Conversion campaigns, funnels, optimization.'},{i:'calendar-days',n:'Event Marketing',d:'Pre-event, live coverage, post-event.'},{i:'pen-tool',n:'Graphic Design',d:'Assets, collateral, presentations, packaging.'},{i:'file-text',n:'Content Production',d:'Articles, captions, scripts, newsletters.'},{i:'bar-chart-3',n:'Growth & Analytics',d:'Reporting, A/B testing, data-driven refinement.'}];
+var EV=[{id:'Ori9EEyGeTM',c:'Video Production',t:'Strategy · Video · Campaign'},{id:'a7qAK6T8xdI',c:'Content Production',t:'Content · Social · Reels'},{id:'8yoXb30If_M',c:'Event Coverage',t:'Events · Video · Live'},{id:'-0wVAz9Qqnc',c:'Commercial',t:'Commercial · Ads · Production'}];
+var CL=[
+  {name:'Brenno William Barber',v:['R4dIj5a5Oh0','us-C8I_rblU','QwJh4iJjAjQ']},
+  {name:'Republic of Grill',v:['7uvREjYeSus','X5jyyIppc1g','CPbsaNaEsik','Anp3Jo4dDxM']},
+  {name:'Delta Painting',v:['9dQ5P5L9q1s','Kp6dyELPVqU','Qd_1vgybods','H3amoCMuwOw','UQCVn_53tJM','kNkl6jWY3FE']},
+  {name:'VR Fitness',v:['ARha0p6c7qE','led4TRiCXhQ','ponE860jhSk','UVmuYf6J8XU']},
+  {name:'Priscila Fernandes Beauty',v:['EbpE793zq_M','gC9vo0ER8yY','esXSQhk3NrU','k45SDxcCX70']},
+  {name:"Mark O'Loughlin Construction",v:['Cac4dNWEUz0']},
+  {name:'Nina Chagas — House Flipping',v:['eO1FcKFlb24','CUlk8sCw9LM']}
+];
+var ST=[{n:'01',t:'Discovery Meeting',d:'We immerse ourselves in your business — goals, audience, positioning, competitive landscape, and communication challenges.'},{n:'02',t:'Strategic Planning',d:'A comprehensive marketing strategy tailored to your objectives. Every channel and deliverable mapped to a clear purpose.'},{n:'03',t:'Creative Production',d:'Our in-house team produces every asset — videos, photography, ad creatives, social content, reels, graphic design.'},{n:'04',t:'Execution',d:'Launch campaigns, publish content, manage channels, execute the complete strategy with surgical precision.'},{n:'05',t:'Growth & Optimization',d:'Continuously monitor performance, optimize campaigns, refine communication, and scale results month after month.'}];
+var EP=[{i:'rocket',l:'Before',t:'Build Anticipation',x:['Invitations & save-the-dates','Promotional video campaigns','Social media countdown','Paid advertising & teasers','Audience engagement','Launch campaign creative']},{i:'radio',l:'During',t:'Capture Everything',x:['Professional photography','Cinematic videography','Real-time stories & reels','Live content publishing','Instant on-site editing','Real-time social management']},{i:'sparkles',l:'After',t:'Extend the Impact',x:['Cinematic highlight reels','Full aftermovie production','Edited photography','Recap videos & long-form edits','Post-event social content','Promotional content for next cycle']}];
+var BR=['LUMIÈRE','VERTEX','AURA','MERIDIAN','NOVA FINANCE','APEX SPORTS','ELYSIAN','PRISM','CIPHER','ATLAS'];
+var WY=[{t:'No Vendor Fragmentation',d:'One team, one contract, one point of contact.'},{t:'Strategy-to-Execution',d:'Conceive, build, launch, optimize — end to end.'},{t:'In-House Production',d:'Every asset produced internally — quality & speed.'},{t:'Brand Consistency',d:'Perfect consistency across every channel.'},{t:'Faster Time to Market',d:'No scheduling conflicts. Everything moves faster.'},{t:'Long-Term Partner',d:'Invested in your long-term growth.'}];
+var FQ=[{q:'What does a 360° marketing agency do?',a:'Handles every aspect of communication — strategy, creative, production, advertising, social media, events, and performance optimization.'},{q:'How is NEXUS different?',a:'We operate as your complete marketing department — strategy, creative, video, photography, social, ads, events, performance all under one roof.'},{q:'What industries?',a:'Luxury, fashion, technology, real estate, healthcare, finance, hospitality, and more.'},{q:'How long to see results?',a:'Creative deliverables in 2-3 weeks. Strategic results in 60-90 days.'},{q:"What's included?",a:'Discovery, strategy, content production, campaigns, paid ads, social management, reporting, optimization.'},{q:'Replace our in-house team?',a:'For companies without a team, we become it. For those with staff, we integrate seamlessly.'}];
+var dd=['d1','d2','d3','d4'];
+var PS='<svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg>';
+var PSB='<svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg>';
+document.getElementById('sg').innerHTML=SV.map(function(s,i){return '<div class="sc bg-white/[.02] rounded-2xl p-6 rv '+dd[i%4]+'"><div class="si text-white/30 mb-4"><i data-lucide="'+s.i+'" class="w-5 h-5"></i></div><h3 class="font-display text-sm font-semibold mb-2">'+s.n+'</h3><p class="text-xs font-light text-white/40 leading-relaxed">'+s.d+'</p></div>'}).join('');
+document.getElementById('vg').innerHTML=EV.map(function(v,i){return '<div class="vc rv '+(i%2?'d2':'d1')+'" data-vid="'+v.id+'"><div class="vw" onclick="ldE(this,\''+v.id+'\')"><img src="https://img.youtube.com/vi/'+v.id+'/maxresdefault.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy"><div class="pbo"><div class="pbc">'+PSB+'</div></div></div><div class="vinf"><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener" class="vlk" onclick="event.stopPropagation();ldE(this.closest(\'.vc\').querySelector(\'.vw\'),\''+v.id+'\')"><span class="text-[10px] tracking-[.2em] uppercase text-accent-400 font-display">'+v.c+'</span><h3 class="font-display text-sm font-semibold mt-1 vt transition-colors"></h3></a><div class="flex items-center gap-3 mt-2"><span class="text-[10px] text-white/25 font-display">'+v.t+'</span><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener" class="text-[10px] text-accent-500/60 hover:text-accent-500 font-display transition-colors" onclick="event.stopPropagation()">YouTube →</a></div></div></div>'}).join('');
+var htk=document.getElementById('htk');
+CL.forEach(function(c){htk.innerHTML+='<div class="cg"><div class="cgl">'+c.name+'</div><div class="cgv">'+c.v.map(function(id){return '<div class="hsl"><div class="hvd" onclick="ldS(this,\''+id+'\')"><img src="https://img.youtube.com/vi/'+id+'/0.jpg" alt="'+c.name+'" loading="lazy"><div class="hvo"><div class="hps">'+PS+'</div></div></div></div>';}).join('')+'</div></div>';});
+document.getElementById('ps').innerHTML=ST.map(function(s,i){var l=i===ST.length-1;return '<div class="rv"><div class="flex gap-5 md:gap-8 items-start"><div class="flex-shrink-0 w-11 h-11 rounded-full border border-accent-500/30 flex items-center justify-center'+(l?' bg-accent-500/10':'')+'"><span class="font-display text-xs font-semibold text-accent-500">'+s.n+'</span></div><div><h3 class="font-display text-lg md:text-xl font-semibold mb-2">'+s.t+'</h3><p class="text-sm font-light text-white/50 leading-relaxed">'+s.d+'</p></div></div></div>'+(!l?'<div class="pcn rv"></div>':'')}).join('');
+document.getElementById('ep').innerHTML=EP.map(function(p,i){return '<div class="ec bg-white/[.02] rounded-2xl p-7 rv '+dd[i%3]+'"><div class="flex items-center gap-3 mb-6"><div class="w-8 h-8 rounded-full bg-accent-500/10 flex items-center justify-center"><i data-lucide="'+p.i+'" class="w-4 h-4 text-accent-500"></i></div><span class="text-[10px] tracking-[.25em] uppercase text-accent-500 font-display font-medium">'+p.l+'</span></div><h3 class="font-display text-lg font-semibold mb-4">'+p.t+'</h3><ul class="space-y-2">'+p.x.map(function(x){return '<li class="flex items-start gap-2 text-xs font-light text-white/50"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-500/60 flex-shrink-0 mt-0.5"></i>'+x+'</li>';}).join('')+'</ul></div>'}).join('');
+var bh=BR.map(function(b){return '<span class="font-display text-lg font-light text-white/12 whitespace-nowrap tracking-wider">'+b+'</span>';}).join('');
+document.getElementById('m1').innerHTML=bh;document.getElementById('m2').innerHTML=bh;
+document.getElementById('wg').innerHTML=WY.map(function(w,i){return '<div class="wc bg-white/[.02] rounded-2xl p-6 rv '+dd[i%3]+'"><h3 class="font-display text-sm font-semibold mb-2">'+w.t+'</h3><p class="text-xs font-light text-white/40 leading-relaxed">'+w.d+'</p></div>'}).join('');
+document.getElementById('fl').innerHTML=FQ.map(function(f){return '<div class="border border-white/5 rounded-xl overflow-hidden"><button class="ft w-full flex items-center justify-between p-5 text-left" aria-expanded="false"><span class="font-display text-sm font-medium pr-4">'+f.q+'</span><i data-lucide="plus" class="w-4 h-4 text-accent-500 flex-shrink-0 fi transition-transform duration-300"></i></button><div class="fa px-5"><p class="text-xs font-light text-white/50 leading-relaxed pb-5">'+f.a+'</p></div></div>'}).join('');
+function mkIf(w,id){var f=document.createElement('iframe');f.src='https://www.youtube.com/embed/'+id+'?rel=0&modestbranding=1&autoplay=1&playsinline=1';f.allow='accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture';f.allowFullscreen=true;f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:none';w.appendChild(f)}
+window.ldE=function(w,id){if(w.querySelector('iframe'))return;var img=w.querySelector('img'),btn=w.querySelector('.pbo');if(img)img.style.display='none';if(btn)btn.classList.add('hid');mkIf(w,id)};
+window.ldS=function(el,id){if(el.querySelector('iframe'))return;var img=el.querySelector('img'),ov=el.querySelector('.hvo');if(img)img.style.display='none';if(ov)ov.style.display='none';mkIf(el,id)};
+(function(){var cv=document.getElementById('tc'),cx=cv.getContext('2d'),run=true,pos={x:-100,y:-100},lines=[],TC=30,NC=20,cfg={friction:.5,spring:.45,dampening:.025,tension:.99};function N(){this.x=0;this.y=0;this.vx=0;this.vy=0}function L(){this.spring=cfg.spring+Math.random()*.02-.01;this.friction=cfg.friction+Math.random()*.01-.005;this.nodes=[];for(var i=0;i<NC;i++){var n=new N();n.x=pos.x;n.y=pos.y;this.nodes.push(n)}}L.prototype.u=function(){var e=this.spring,t=this.nodes[0];t.vx+=(pos.x-t.x)*e;t.vy+=(pos.y-t.y)*e;for(var i=0;i<this.nodes.length;i++){t=this.nodes[i];if(i>0){var p=this.nodes[i-1];t.vx+=(p.x-t.x)*e;t.vy+=(p.y-t.y)*e;t.vx+=p.vx*cfg.dampening;t.vy+=p.vy*cfg.dampening}t.vx*=this.friction;t.vy*=this.friction;t.x+=t.vx;t.y+=t.vy;e*=cfg.tension}};L.prototype.d=function(){var t=this.nodes[0];cx.beginPath();cx.moveTo(t.x,t.y);for(var i=1,o=this.nodes.length-2;i<o;i++){var e=this.nodes[i],n=this.nodes[i+1];cx.quadraticCurveTo(e.x,e.y,.5*(e.x+n.x),.5*(e.y+n.y))}cx.quadraticCurveTo(this.nodes[o].x,this.nodes[o].y,this.nodes[o+1].x,this.nodes[o+1].y);cx.stroke();cx.closePath()};function rs(){cv.width=window.innerWidth;cv.height=window.innerHeight}function rn(){if(!run)return;requestAnimationFrame(rn);cx.globalCompositeOperation='source-over';cx.clearRect(0,0,cv.width,cv.height);cx.globalCompositeOperation='lighter';cx.strokeStyle='rgba(249,115,22,0.025)';cx.lineWidth=10;for(var i=0;i<TC;i++){lines[i].u();lines[i].d()}}function il(){lines=[];for(var i=0;i<TC;i++)lines.push(new L())}function mv(e){e.touches?(pos.x=e.touches[0].pageX,pos.y=e.touches[0].pageY):(pos.x=e.clientX,pos.y=e.clientY)}document.addEventListener('mousemove',mv,{passive:true});document.addEventListener('touchmove',mv,{passive:true});document.addEventListener('touchstart',function(e){if(e.touches.length===1){pos.x=e.touches[0].pageX;pos.y=e.touches[0].pageY}},{passive:true});window.addEventListener('resize',rs,{passive:true});window.addEventListener('blur',function(){run=false});window.addEventListener('focus',function(){if(!run){run=true;rn()}});rs();il();rn()})();
+document.addEventListener('DOMContentLoaded',function(){
+lucide.createIcons();
+window.addEventListener('load',function(){setTimeout(function(){document.getElementById('loader').classList.add('out');gsap.to('.he',{opacity:1,y:0,duration:.9,stagger:.12,ease:'power3.out'})},1400)});
+var ro=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('on')})},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rv').forEach(function(el){ro.observe(el)});
+var so=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){var el=x.target,t=parseInt(el.dataset.t),sfx=t===98?'%':'+';gsap.to({v:0},{v:t,duration:1.6,ease:'power2.out',onUpdate:function(){el.textContent=Math.round(this.targets()[0].v).toLocaleString()+sfx}});so.unobserve(el)}})},{threshold:.5});
+document.querySelectorAll('.sn').forEach(function(el){so.observe(el)});
+var mo=false;document.getElementById('mtog').addEventListener('click',function(){mo=!mo;document.getElementById('mm').classList.toggle('op',mo);if(mo)gsap.fromTo('.ml',{opacity:0,y:15},{opacity:1,y:0,stagger:.05,duration:.3})});
+document.querySelectorAll('.ml').forEach(function(l){l.addEventListener('click',function(){mo=false;document.getElementById('mm').classList.remove('op')})});
+document.addEventListener('click',function(e){var btn=e.target.closest('.ft');if(!btn)return;var it=btn.parentElement,ans=it.querySelector('.fa'),ic=btn.querySelector('.fi'),op=ans.classList.contains('op');document.querySelectorAll('.fa').forEach(function(a){a.classList.remove('op')});document.querySelectorAll('.ft').forEach(function(b){b.setAttribute('aria-expanded','false')});document.querySelectorAll('.fi').forEach(function(i){i.style.transform='rotate(0deg)'});if(!op){ans.classList.add('op');btn.setAttribute('aria-expanded','true');ic.style.transform='rotate(45deg)'}});
+var nav=document.querySelector('.gn');window.addEventListener('scroll',function(){nav.style.background=window.scrollY>50?'rgba(0,0,0,.92)':'rgba(0,0,0,.75)'},{passive:true});
+EV.forEach(function(v){fetch('https://noembed.com/embed?url=https://www.youtube.com/watch?v='+v.id,{signal:AbortSignal.timeout(4000)}).then(function(r){return r.json()}).then(function(d){if(d.title){var el=document.querySelector('[data-vid="'+v.id+'"] .vt');if(el)el.textContent=d.title}}).catch(function(){})});
+});
+</script>
+</body>
