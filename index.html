@@ -33,7 +33,6 @@
 .fa{max-height:0;overflow:hidden;transition:max-height .4s}.fa.op{max-height:300px}
 .sc{border:1px solid rgba(255,255,255,.05);transition:all .3s}.sc:hover{border-color:rgba(249,115,22,.2);transform:translateY(-2px)}.sc:hover .si{color:#F97316}.si{transition:color .3s}
 .ec{border:1px solid rgba(255,255,255,.05);transition:all .3s}.ec:hover{border-color:rgba(249,115,22,.12);background:rgba(249,115,22,.02)}
-.wc{border:1px solid rgba(255,255,255,.05);transition:all .3s}.wc:hover{border-color:rgba(255,255,255,.08);background:rgba(255,255,255,.02)}
 .vc{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.05);background:#0a0a0a;transition:all .4s}.vc:hover{border-color:rgba(249,115,22,.2);box-shadow:0 16px 50px -12px rgba(249,115,22,.1);transform:translateY(-3px)}
 .vw{position:relative;width:100%;aspect-ratio:16/10;overflow:hidden;cursor:pointer;background:#000}
 .vw iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
@@ -64,6 +63,11 @@
 .sn{font-variant-numeric:tabular-nums}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#000}::-webkit-scrollbar-thumb{background:rgba(249,115,22,.2);border-radius:3px}
 ::selection{background:rgba(249,115,22,.3);color:#fff}
+.wc{border:1px solid rgba(0,0,0,.07);background:rgba(0,0,0,.02);transition:all .3s}
+.wc:hover{border-color:rgba(249,115,22,.25);background:rgba(249,115,22,.04);transform:translateY(-2px);box-shadow:0 8px 30px -8px rgba(249,115,22,.1)}
+.wc h3{color:#0a0a0a}
+.wc p{color:rgba(0,0,0,.5)}
+.wc:hover h3{color:#c2410c}
 @media(max-width:640px){.hsl{width:clamp(160px,40vw,220px)}.cgv{gap:.4rem}.cg{padding-right:1.5rem}}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}.mqt{animation:none}}
 </style>
@@ -88,7 +92,7 @@
 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 he" style="opacity:0;transform:translateY(30px)"><a href="#contact" class="bp">Start Your Discovery <i data-lucide="arrow-right" class="w-4 h-4"></i></a><a href="#portfolio" class="bs">View Our Work <i data-lucide="play" class="w-4 h-4"></i></a></div>
 </div></section>
 
-<section class="py-16 md:py-24 border-y border-white/5"><div class="max-w-5xl mx-auto px-6 text-center rv"><p class="font-display text-2xl md:text-4xl lg:text-5xl font-light tracking-tight leading-snug text-white/80">Stop managing vendors.<br><span class="font-semibold text-white">Start growing your brand.</span></p></div></section>
+<section class="py-16 md:py-24 border-y border-black/10" style="background:#fff"><div class="max-w-5xl mx-auto px-6 text-center rv"><p class="font-display text-2xl md:text-4xl lg:text-5xl font-light tracking-tight leading-snug" style="color:rgba(0,0,0,.7)">Stop managing vendors.<br><span class="font-semibold" style="color:#0a0a0a">Start growing your brand.</span></p></div></section>
 
 <section id="services" class="py-20 md:py-28"><div class="max-w-7xl mx-auto px-6">
 <div class="max-w-2xl mb-14 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Capabilities</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4">Every Capability Your Brand Needs</h2><p class="text-sm font-light text-white/50 leading-relaxed">No gaps. No handoffs. A fully integrated team.</p></div>
@@ -124,8 +128,8 @@
 
 <section class="py-14 border-y border-white/5 overflow-hidden"><div class="relative" aria-hidden="true"><div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black to-transparent z-10"></div><div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black to-transparent z-10"></div><div class="mqt"><div class="flex items-center gap-12 px-6" id="m1"></div><div class="flex items-center gap-12 px-6" id="m2"></div></div></div></section>
 
-<section class="py-20 md:py-28"><div class="max-w-7xl mx-auto px-6">
-<div class="max-w-2xl mb-14 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Why NEXUS</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4">One Agency. Every Capability. Zero Compromise.</h2></div>
+<section class="py-20 md:py-28" style="background:#fff"><div class="max-w-7xl mx-auto px-6">
+<div class="max-w-2xl mb-14 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Why NEXUS</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4" style="color:#0a0a0a">One Agency. Every Capability. Zero Compromise.</h2></div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="wg"></div>
 </div></section>
 
@@ -134,7 +138,8 @@
 <div class="space-y-2 rv" id="fl"></div>
 </div></section>
 
-<section id="contact" class="relative py-24 md:py-36 overflow-hidden"><div class="absolute inset-0 bg-gradient-to-b from-transparent via-accent-500/[.03] to-transparent"></div><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-accent-500/[.04] blur-[100px]"></div>
+<section id="contact" class="relative py-24 md:py-36 overflow-hidden"><div class="absolute inset-0 bg-gradient-to-b from-transparent via-accent-500/[.03] to-transparent"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-accent-500/[.04] blur-[100px]"></div>
 <div class="relative z-10 max-w-3xl mx-auto px-6 text-center rv">
 <p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-4 font-display">Let's Begin</p>
 <h2 class="font-display text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight leading-[1.1] mb-6">Ready to Stop Managing Marketing<br>and Start Growing?</h2>
@@ -187,7 +192,7 @@ document.getElementById('ps').innerHTML=ST.map(function(s,i){var l=i===ST.length
 document.getElementById('ep').innerHTML=EP.map(function(p,i){return '<div class="ec bg-white/[.02] rounded-2xl p-7 rv '+dd[i%3]+'"><div class="flex items-center gap-3 mb-6"><div class="w-8 h-8 rounded-full bg-accent-500/10 flex items-center justify-center"><i data-lucide="'+p.i+'" class="w-4 h-4 text-accent-500"></i></div><span class="text-[10px] tracking-[.25em] uppercase text-accent-500 font-display font-medium">'+p.l+'</span></div><h3 class="font-display text-lg font-semibold mb-4">'+p.t+'</h3><ul class="space-y-2">'+p.x.map(function(x){return '<li class="flex items-start gap-2 text-xs font-light text-white/50"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-500/60 flex-shrink-0 mt-0.5"></i>'+x+'</li>';}).join('')+'</ul></div>'}).join('');
 var bh=BR.map(function(b){return '<span class="font-display text-lg font-light text-white/12 whitespace-nowrap tracking-wider">'+b+'</span>';}).join('');
 document.getElementById('m1').innerHTML=bh;document.getElementById('m2').innerHTML=bh;
-document.getElementById('wg').innerHTML=WY.map(function(w,i){return '<div class="wc bg-white/[.02] rounded-2xl p-6 rv '+dd[i%3]+'"><h3 class="font-display text-sm font-semibold mb-2">'+w.t+'</h3><p class="text-xs font-light text-white/40 leading-relaxed">'+w.d+'</p></div>'}).join('');
+document.getElementById('wg').innerHTML=WY.map(function(w,i){return '<div class="wc rounded-2xl p-6 rv '+dd[i%3]+'"><h3 class="font-display text-sm font-semibold mb-2">'+w.t+'</h3><p class="text-xs font-light leading-relaxed">'+w.d+'</p></div>'}).join('');
 document.getElementById('fl').innerHTML=FQ.map(function(f){return '<div class="border border-white/5 rounded-xl overflow-hidden"><button class="ft w-full flex items-center justify-between p-5 text-left" aria-expanded="false"><span class="font-display text-sm font-medium pr-4">'+f.q+'</span><i data-lucide="plus" class="w-4 h-4 text-accent-500 flex-shrink-0 fi transition-transform duration-300"></i></button><div class="fa px-5"><p class="text-xs font-light text-white/50 leading-relaxed pb-5">'+f.a+'</p></div></div>'}).join('');
 function mkIf(w,id){var f=document.createElement('iframe');f.src='https://www.youtube.com/embed/'+id+'?rel=0&modestbranding=1&autoplay=1&playsinline=1';f.allow='accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture';f.allowFullscreen=true;f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:none';w.appendChild(f)}
 window.ldE=function(w,id){if(w.querySelector('iframe'))return;var img=w.querySelector('img'),btn=w.querySelector('.pbo');if(img)img.style.display='none';if(btn)btn.classList.add('hid');mkIf(w,id)};
