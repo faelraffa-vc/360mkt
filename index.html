@@ -33,6 +33,7 @@
 .fa{max-height:0;overflow:hidden;transition:max-height .4s}.fa.op{max-height:300px}
 .sc{border:1px solid rgba(255,255,255,.05);transition:all .3s}.sc:hover{border-color:rgba(249,115,22,.2);transform:translateY(-2px)}.sc:hover .si{color:#F97316}.si{transition:color .3s}
 .ec{border:1px solid rgba(255,255,255,.05);transition:all .3s}.ec:hover{border-color:rgba(249,115,22,.12);background:rgba(249,115,22,.02)}
+.wc{border:1px solid rgba(255,255,255,.05);transition:all .3s}.wc:hover{border-color:rgba(255,255,255,.08);background:rgba(255,255,255,.02)}
 .vc{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.05);background:#0a0a0a;transition:all .4s}.vc:hover{border-color:rgba(249,115,22,.2);box-shadow:0 16px 50px -12px rgba(249,115,22,.1);transform:translateY(-3px)}
 .vw{position:relative;width:100%;aspect-ratio:16/10;overflow:hidden;cursor:pointer;background:#000}
 .vw iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
@@ -40,7 +41,7 @@
 .pbc{width:64px;height:64px;border-radius:50%;background:rgba(249,115,22,.9);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(249,115,22,.4);transition:transform .3s}.pbc:hover{transform:scale(1.1)}
 .vinf{padding:1rem 1.25rem;border-top:1px solid rgba(255,255,255,.05)}
 .vlk{text-decoration:none;color:inherit}.vlk:hover h3{color:#F97316}
-.hcr{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}.hcr::-webkit-scrollbar{display:none}
+.hcr{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;position:relative}.hcr::-webkit-scrollbar{display:none}
 .htk{display:flex;gap:0;padding:0 1rem 1rem}
 .cg{flex-shrink:0;padding-right:2.5rem}
 .cgl{font-family:'Space Grotesk',sans-serif;font-size:.65rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#F97316;margin-bottom:.75rem;padding-left:.25rem;white-space:nowrap}
@@ -52,6 +53,12 @@
 .hvo{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.25);transition:background .3s}.hvd:hover .hvo{background:rgba(0,0,0,.08)}
 .hps{width:36px;height:36px;border-radius:50%;background:rgba(249,115,22,.85);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(249,115,22,.25);transition:transform .3s}.hvd:hover .hps{transform:scale(1.1)}
 .hvd iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+.scroll-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:20;width:48px;height:48px;border-radius:50%;background:#F97316;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(249,115,22,.4);transition:all .3s;opacity:0;pointer-events:none}
+.scroll-btn.visible{opacity:1;pointer-events:auto}
+.scroll-btn:hover{background:#EA580C;transform:translateY(-50%) scale(1.08);box-shadow:0 6px 28px rgba(249,115,22,.55)}
+.scroll-btn:active{transform:translateY(-50%) scale(.95)}
+.scroll-btn-r{right:12px}
+.scroll-btn-l{left:12px}
 .pcn{width:1px;height:40px;margin:0 auto;background:linear-gradient(to bottom,rgba(249,115,22,.3),rgba(249,115,22,.05))}
 .bp{background:#F97316;color:#fff;font-weight:500;padding:.75rem 1.6rem;border-radius:9999px;transition:all .3s;display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;border:none;cursor:pointer;text-decoration:none}
 .bp:hover{background:#EA580C;transform:translateY(-1px);box-shadow:0 10px 25px -6px rgba(249,115,22,.4)}
@@ -63,12 +70,7 @@
 .sn{font-variant-numeric:tabular-nums}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#000}::-webkit-scrollbar-thumb{background:rgba(249,115,22,.2);border-radius:3px}
 ::selection{background:rgba(249,115,22,.3);color:#fff}
-.wc{border:1px solid rgba(0,0,0,.07);background:rgba(0,0,0,.02);transition:all .3s}
-.wc:hover{border-color:rgba(249,115,22,.25);background:rgba(249,115,22,.04);transform:translateY(-2px);box-shadow:0 8px 30px -8px rgba(249,115,22,.1)}
-.wc h3{color:#0a0a0a}
-.wc p{color:rgba(0,0,0,.5)}
-.wc:hover h3{color:#c2410c}
-@media(max-width:640px){.hsl{width:clamp(160px,40vw,220px)}.cgv{gap:.4rem}.cg{padding-right:1.5rem}}
+@media(max-width:640px){.hsl{width:clamp(160px,40vw,220px)}.cgv{gap:.4rem}.cg{padding-right:1.5rem}.scroll-btn{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}.mqt{animation:none}}
 </style>
 </head>
@@ -92,7 +94,7 @@
 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 he" style="opacity:0;transform:translateY(30px)"><a href="#contact" class="bp">Start Your Discovery <i data-lucide="arrow-right" class="w-4 h-4"></i></a><a href="#portfolio" class="bs">View Our Work <i data-lucide="play" class="w-4 h-4"></i></a></div>
 </div></section>
 
-<section class="py-16 md:py-24 border-y border-black/10" style="background:#fff"><div class="max-w-5xl mx-auto px-6 text-center rv"><p class="font-display text-2xl md:text-4xl lg:text-5xl font-light tracking-tight leading-snug" style="color:rgba(0,0,0,.7)">Stop managing vendors.<br><span class="font-semibold" style="color:#0a0a0a">Start growing your brand.</span></p></div></section>
+<section class="py-16 md:py-24 border-y border-white/5"><div class="max-w-5xl mx-auto px-6 text-center rv"><p class="font-display text-2xl md:text-4xl lg:text-5xl font-light tracking-tight leading-snug text-white/80">Stop managing vendors.<br><span class="font-semibold text-white">Start growing your brand.</span></p></div></section>
 
 <section id="services" class="py-20 md:py-28"><div class="max-w-7xl mx-auto px-6">
 <div class="max-w-2xl mb-14 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Capabilities</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4">Every Capability Your Brand Needs</h2><p class="text-sm font-light text-white/50 leading-relaxed">No gaps. No handoffs. A fully integrated team.</p></div>
@@ -105,8 +107,18 @@
 </div></section>
 
 <section id="social" class="py-20 md:py-28 border-t border-white/5"><div class="max-w-7xl mx-auto">
-<div class="px-6 max-w-2xl mb-10 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Social Media Content</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4">Vertical Content That Stops the Scroll</h2><p class="text-sm font-light text-white/50">Scroll horizontally. Click to play.</p></div>
-<div class="hcr rv" id="hcr"><div class="htk" id="htk"></div></div>
+<div class="px-6 max-w-2xl mb-10 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Social Media Content</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4">Vertical Content That Stops the Scroll</h2><p class="text-sm font-light text-white/50">Click the arrows to navigate. Click any video to play.</p></div>
+<div class="relative rv" id="socialWrap">
+<div class="hcr" id="hcr">
+<div class="htk" id="htk"></div>
+</div>
+<button class="scroll-btn scroll-btn-l" id="scrollL" aria-label="Scroll left">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+</button>
+<button class="scroll-btn scroll-btn-r visible" id="scrollR" aria-label="Scroll right">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+</button>
+</div>
 </div></section>
 
 <section class="py-14 border-y border-white/5"><div class="max-w-7xl mx-auto px-6"><div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -128,8 +140,8 @@
 
 <section class="py-14 border-y border-white/5 overflow-hidden"><div class="relative" aria-hidden="true"><div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black to-transparent z-10"></div><div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black to-transparent z-10"></div><div class="mqt"><div class="flex items-center gap-12 px-6" id="m1"></div><div class="flex items-center gap-12 px-6" id="m2"></div></div></div></section>
 
-<section class="py-20 md:py-28" style="background:#fff"><div class="max-w-7xl mx-auto px-6">
-<div class="max-w-2xl mb-14 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Why NEXUS</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4" style="color:#0a0a0a">One Agency. Every Capability. Zero Compromise.</h2></div>
+<section class="py-20 md:py-28"><div class="max-w-7xl mx-auto px-6">
+<div class="max-w-2xl mb-14 rv"><p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-3 font-display">Why NEXUS</p><h2 class="font-display text-3xl md:text-5xl font-semibold tracking-tight mb-4">One Agency. Every Capability. Zero Compromise.</h2></div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="wg"></div>
 </div></section>
 
@@ -138,8 +150,7 @@
 <div class="space-y-2 rv" id="fl"></div>
 </div></section>
 
-<section id="contact" class="relative py-24 md:py-36 overflow-hidden"><div class="absolute inset-0 bg-gradient-to-b from-transparent via-accent-500/[.03] to-transparent"></div>
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-accent-500/[.04] blur-[100px]"></div>
+<section id="contact" class="relative py-24 md:py-36 overflow-hidden"><div class="absolute inset-0 bg-gradient-to-b from-transparent via-accent-500/[.03] to-transparent"></div><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-accent-500/[.04] blur-[100px]"></div>
 <div class="relative z-10 max-w-3xl mx-auto px-6 text-center rv">
 <p class="text-xs font-medium tracking-[.3em] uppercase text-accent-500 mb-4 font-display">Let's Begin</p>
 <h2 class="font-display text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight leading-[1.1] mb-6">Ready to Stop Managing Marketing<br>and Start Growing?</h2>
@@ -164,7 +175,7 @@ var CL=[
   {name:'Delta Painting',v:['9dQ5P5L9q1s','Kp6dyELPVqU','Qd_1vgybods','H3amoCMuwOw','UQCVn_53tJM','kNkl6jWY3FE']},
   {name:'VR Fitness',v:['ARha0p6c7qE','led4TRiCXhQ','ponE860jhSk','UVmuYf6J8XU']},
   {name:'Priscila Fernandes Beauty',v:['EbpE793zq_M','gC9vo0ER8yY','esXSQhk3NrU','k45SDxcCX70']},
-  {name:"Mark O'Loughlin Construction",v:['Cac4dNWEUz0']},
+  {name:"Mark O'Loughlin Contractors Ltd",v:['Cac4dNWEUz0']},
   {name:'Nina Chagas — House Flipping',v:['eO1FcKFlb24','CUlk8sCw9LM']}
 ];
 var ST=[
@@ -178,7 +189,7 @@ var ST=[
 {n:'08',t:'Growth & Optimization',d:'Continuously monitor performance, optimize campaigns, refine communication, and scale results month after month.'}
 ];
 var EP=[{i:'rocket',l:'Before',t:'Build Anticipation',x:['Invitations & save-the-dates','Promotional video campaigns','Social media countdown','Paid advertising & teasers','Audience engagement','Launch campaign creative']},{i:'radio',l:'During',t:'Capture Everything',x:['Professional photography','Cinematic videography','Real-time stories & reels','Live content publishing','Instant on-site editing','Real-time social management']},{i:'sparkles',l:'After',t:'Extend the Impact',x:['Cinematic highlight reels','Full aftermovie production','Edited photography','Recap videos & long-form edits','Post-event social content','Promotional content for next cycle']}];
-var BR=['LUMIÈRE','VERTEX','AURA','MERIDIAN','NOVA FINANCE','APEX SPORTS','ELYSIAN','PRISM','CIPHER','ATLAS'];
+var BR=['Big Boss Events','Limerick Racecourse','Priscila Fernandes Beauty','Guild Barbershop','Skillnet','Delta Painting','Mark O\'Loughlin Contractors Ltd','VR Fitness','Breakthrough Dance Co','Perfect Solutions'];
 var WY=[{t:'No Vendor Fragmentation',d:'One team, one contract, one point of contact.'},{t:'Strategy-to-Execution',d:'Conceive, build, launch, optimize — end to end.'},{t:'In-House Production',d:'Every asset produced internally — quality & speed.'},{t:'Brand Consistency',d:'Perfect consistency across every channel.'},{t:'Faster Time to Market',d:'No scheduling conflicts. Everything moves faster.'},{t:'Long-Term Partner',d:'Invested in your long-term growth.'}];
 var FQ=[{q:'What does a 360° marketing agency do?',a:'Handles every aspect of communication — strategy, creative, production, advertising, social media, events, and performance optimization.'},{q:'How is NEXUS different?',a:'We operate as your complete marketing department — strategy, creative, video, photography, social, ads, events, performance all under one roof.'},{q:'What industries?',a:'Luxury, fashion, technology, real estate, healthcare, finance, hospitality, and more.'},{q:'How long to see results?',a:'Creative deliverables in 2-3 weeks. Strategic results in 60-90 days.'},{q:"What's included?",a:'Discovery, strategy, content production, campaigns, paid ads, social management, reporting, optimization.'},{q:'Replace our in-house team?',a:'For companies without a team, we become it. For those with staff, we integrate seamlessly.'}];
 var dd=['d1','d2','d3','d4'];
@@ -192,7 +203,7 @@ document.getElementById('ps').innerHTML=ST.map(function(s,i){var l=i===ST.length
 document.getElementById('ep').innerHTML=EP.map(function(p,i){return '<div class="ec bg-white/[.02] rounded-2xl p-7 rv '+dd[i%3]+'"><div class="flex items-center gap-3 mb-6"><div class="w-8 h-8 rounded-full bg-accent-500/10 flex items-center justify-center"><i data-lucide="'+p.i+'" class="w-4 h-4 text-accent-500"></i></div><span class="text-[10px] tracking-[.25em] uppercase text-accent-500 font-display font-medium">'+p.l+'</span></div><h3 class="font-display text-lg font-semibold mb-4">'+p.t+'</h3><ul class="space-y-2">'+p.x.map(function(x){return '<li class="flex items-start gap-2 text-xs font-light text-white/50"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-500/60 flex-shrink-0 mt-0.5"></i>'+x+'</li>';}).join('')+'</ul></div>'}).join('');
 var bh=BR.map(function(b){return '<span class="font-display text-lg font-light text-white/12 whitespace-nowrap tracking-wider">'+b+'</span>';}).join('');
 document.getElementById('m1').innerHTML=bh;document.getElementById('m2').innerHTML=bh;
-document.getElementById('wg').innerHTML=WY.map(function(w,i){return '<div class="wc rounded-2xl p-6 rv '+dd[i%3]+'"><h3 class="font-display text-sm font-semibold mb-2">'+w.t+'</h3><p class="text-xs font-light leading-relaxed">'+w.d+'</p></div>'}).join('');
+document.getElementById('wg').innerHTML=WY.map(function(w,i){return '<div class="wc bg-white/[.02] rounded-2xl p-6 rv '+dd[i%3]+'"><h3 class="font-display text-sm font-semibold mb-2">'+w.t+'</h3><p class="text-xs font-light text-white/40 leading-relaxed">'+w.d+'</p></div>'}).join('');
 document.getElementById('fl').innerHTML=FQ.map(function(f){return '<div class="border border-white/5 rounded-xl overflow-hidden"><button class="ft w-full flex items-center justify-between p-5 text-left" aria-expanded="false"><span class="font-display text-sm font-medium pr-4">'+f.q+'</span><i data-lucide="plus" class="w-4 h-4 text-accent-500 flex-shrink-0 fi transition-transform duration-300"></i></button><div class="fa px-5"><p class="text-xs font-light text-white/50 leading-relaxed pb-5">'+f.a+'</p></div></div>'}).join('');
 function mkIf(w,id){var f=document.createElement('iframe');f.src='https://www.youtube.com/embed/'+id+'?rel=0&modestbranding=1&autoplay=1&playsinline=1';f.allow='accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture';f.allowFullscreen=true;f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:none';w.appendChild(f)}
 window.ldE=function(w,id){if(w.querySelector('iframe'))return;var img=w.querySelector('img'),btn=w.querySelector('.pbo');if(img)img.style.display='none';if(btn)btn.classList.add('hid');mkIf(w,id)};
@@ -220,6 +231,37 @@ document.querySelectorAll('.ml').forEach(function(l){l.addEventListener('click',
 document.addEventListener('click',function(e){var btn=e.target.closest('.ft');if(!btn)return;var it=btn.parentElement,ans=it.querySelector('.fa'),ic=btn.querySelector('.fi'),op=ans.classList.contains('op');document.querySelectorAll('.fa').forEach(function(a){a.classList.remove('op')});document.querySelectorAll('.ft').forEach(function(b){b.setAttribute('aria-expanded','false')});document.querySelectorAll('.fi').forEach(function(i){i.style.transform='rotate(0deg)'});if(!op){ans.classList.add('op');btn.setAttribute('aria-expanded','true');ic.style.transform='rotate(45deg)'}});
 var nav=document.querySelector('.gn');window.addEventListener('scroll',function(){nav.style.background=window.scrollY>50?'rgba(0,0,0,.92)':'rgba(0,0,0,.75)'},{passive:true});
 EV.forEach(function(v){fetch('https://noembed.com/embed?url=https://www.youtube.com/watch?v='+v.id,{signal:AbortSignal.timeout(4000)}).then(function(r){return r.json()}).then(function(d){if(d.title){var el=document.querySelector('[data-vid="'+v.id+'"] .vt');if(el)el.textContent=d.title}}).catch(function(){})});
+
+// Scroll buttons for horizontal video carousel
+var hcr = document.getElementById('hcr');
+var scrollR = document.getElementById('scrollR');
+var scrollL = document.getElementById('scrollL');
+var scrollAmount = 400;
+var scrolling = false;
+
+function updateBtns() {
+  var maxScroll = hcr.scrollWidth - hcr.clientWidth;
+  scrollR.classList.toggle('visible', hcr.scrollLeft < maxScroll - 10);
+  scrollL.classList.toggle('visible', hcr.scrollLeft > 10);
+}
+
+scrollR.addEventListener('click', function() {
+  if (scrolling) return;
+  scrolling = true;
+  hcr.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  setTimeout(function() { scrolling = false; }, 400);
+});
+
+scrollL.addEventListener('click', function() {
+  if (scrolling) return;
+  scrolling = true;
+  hcr.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  setTimeout(function() { scrolling = false; }, 400);
+});
+
+hcr.addEventListener('scroll', updateBtns);
+window.addEventListener('resize', updateBtns);
+setTimeout(updateBtns, 100);
 });
 </script>
 </body>
