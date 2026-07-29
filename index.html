@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FIRST PLACE STUDIO — Your Entire Marketing Department, Under One Roof</title>
 <meta name="description" content="Premium 360° marketing agency — strategy, creative, production, media, and growth under one roof.">
-<link rel="icon" type="image/png" href="https://z-cdn-media.chatglm.cn/files/4a374bcc-52f5-4937-8944-98e75c1e2c21.png?auth_key=1884055498-ee4518aa89e749cfbf27d5c360a947e6-0-da6a2490722840e06fc8fd227fdebf07">
+<link rel="icon" type="image/png" href="https://z-cdn-media.chatglm.cn/files/0d203442-addc-4268-b2bf-1bc48d661265.png?auth_key=1885326200-6e11039af5e8412284b3d74fb00661a0-0-db0ec18381ded7908ce844e9e4e3b194">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 
 #loader{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .6s var(--ease),visibility .6s}
 #loader.out{opacity:0;visibility:hidden;pointer-events:none}
-.loader-logo{width:72px;height:72px;object-fit:contain;border-radius:12px}
+.loader-logo{width:120px;height:auto;object-fit:contain}
 .lb{width:60px;height:2px;background:rgba(255,255,255,.1);margin-top:1.5rem;border-radius:99px;overflow:hidden}
 .lb i{display:block;width:0;height:100%;background:#FF7700;border-radius:99px;animation:lf 1.2s var(--ease) forwards}
 @keyframes lf{to{width:100%}}
@@ -43,7 +43,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
 
 @keyframes mq{to{transform:translateX(-50%)}}
-.mqt{display:flex;width:max-content;animation:mq 30s linear infinite}
+.mqt{display:flex;width:max-content;animation:mq 40s linear infinite}
 
 .fa{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
 .fa.op{max-height:400px}
@@ -133,7 +133,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .scroll-btn.left{left:8px}
 .scroll-btn.right{right:8px}
 
-.nav-logo{height:34px;width:auto;object-fit:contain;border-radius:8px}
+.nav-logo{height:24px;width:auto;object-fit:contain}
+.footer-logo{height:28px;width:auto;object-fit:contain}
+.hero-badge-logo{height:22px;width:auto;object-fit:contain}
+
+.client-sep{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.35);flex-shrink:0}
 
 @media(max-width:640px){
 .hsl{width:clamp(160px,40vw,220px)}
@@ -145,8 +149,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .scroll-btn{width:36px;height:36px}
 .scroll-btn.left{left:4px}
 .scroll-btn.right{right:4px}
-.nav-logo{height:28px}
-.loader-logo{width:56px;height:56px}
+.nav-logo{height:18px}
+.footer-logo{height:22px}
+.loader-logo{width:90px}
+.hero-badge-logo{height:16px}
 }
 @media(prefers-reduced-motion:reduce){
 *{animation-duration:.01ms !important;transition-duration:.01ms !important}
@@ -158,14 +164,14 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 <body>
 
 <div id="loader">
-<img src="https://z-cdn-media.chatglm.cn/files/eb33e4e0-fab8-42da-82c7-0041b22985ac.png?auth_key=1884062031-04f991246082489b96d07364252d2016-0-0246cea6ba695cc65b7fc41086352b2b" alt="First Place Studio" class="loader-logo">
+<img src="https://z-cdn-media.chatglm.cn/files/bce00fbb-6f4e-4ec1-b453-7137e9721dc9.png?auth_key=1885326200-0a8149d67c2c46b2ae82576252463fe6-0-0c03b35139da5f63e2f0b25ca52ed3ff" alt="First Place Studio" class="loader-logo">
 <div class="lb"><i></i></div>
 </div>
 
 <nav class="gn fixed top-0 left-0 right-0 z-50" id="nav">
 <div class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
 <a href="#" class="flex items-center gap-3">
-<img src="https://z-cdn-media.chatglm.cn/files/eb33e4e0-fab8-42da-82c7-0041b22985ac.png?auth_key=1884062031-04f991246082489b96d07364252d2016-0-0246cea6ba695cc65b7fc41086352b2b" alt="First Place Studio" class="nav-logo">
+<img src="https://z-cdn-media.chatglm.cn/files/bce00fbb-6f4e-4ec1-b453-7137e9721dc9.png?auth_key=1885326200-0a8149d67c2c46b2ae82576252463fe6-0-0c03b35139da5f63e2f0b25ca52ed3ff" alt="First Place Studio" class="nav-logo">
 </a>
 <div class="hidden md:flex items-center gap-8">
 <a href="#services" class="text-[13px] text-white/50 hover:text-white transition-colors duration-300 font-medium">Services</a>
@@ -198,9 +204,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 <div class="hero-blob blob-2"></div>
 <div class="hero-blob blob-3"></div>
 <div class="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
-<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(255,119,0,.25)] bg-[rgba(255,119,0,.08)] mb-8 he" style="opacity:0;transform:translateY(20px)">
-<span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
-<span class="font-display text-xs font-medium tracking-[.2em] uppercase text-accent-500">360° Marketing Agency</span>
+<div class="inline-flex items-center justify-center px-6 py-3 rounded-full border border-[rgba(255,119,0,.25)] bg-[rgba(255,119,0,.08)] mb-8 he" style="opacity:0;transform:translateY(20px)">
+<img src="https://z-cdn-media.chatglm.cn/files/bce00fbb-6f4e-4ec1-b453-7137e9721dc9.png?auth_key=1885326200-0a8149d67c2c46b2ae82576252463fe6-0-0c03b35139da5f63e2f0b25ca52ed3ff" alt="First Place Studio" class="hero-badge-logo">
 </div>
 <h1 class="font-display text-[clamp(2.5rem,7vw,6rem)] font-semibold leading-[1.05] tracking-tight mb-8 text-white he" style="opacity:0;transform:translateY(30px)">
 Your Entire Marketing<br>
@@ -295,11 +300,11 @@ Strategy. Creative. Production. Media. Growth.<br class="hidden sm:block">
 
 <section class="py-12 orange-block overflow-hidden">
 <div class="relative">
-<div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-accent-500 to-transparent z-10"></div>
-<div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-accent-500 to-transparent z-10"></div>
+<div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-accent-500 to-transparent z-10"></div>
+<div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-accent-500 to-transparent z-10"></div>
 <div class="mqt">
-<div class="flex items-center gap-14 px-6" id="m1"></div>
-<div class="flex items-center gap-14 px-6" id="m2"></div>
+<div class="flex items-center gap-10 px-8" id="m1"></div>
+<div class="flex items-center gap-10 px-8" id="m2"></div>
 </div>
 </div>
 </section>
@@ -343,7 +348,7 @@ Strategy. Creative. Production. Media. Growth.<br class="hidden sm:block">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
 <div class="md:col-span-2">
 <a href="#" class="inline-block">
-<img src="https://z-cdn-media.chatglm.cn/files/eb33e4e0-fab8-42da-82c7-0041b22985ac.png?auth_key=1884062031-04f991246082489b96d07364252d2016-0-0246cea6ba695cc65b7fc41086352b2b" alt="First Place Studio" class="nav-logo">
+<img src="https://z-cdn-media.chatglm.cn/files/bce00fbb-6f4e-4ec1-b453-7137e9721dc9.png?auth_key=1885326200-0a8149d67c2c46b2ae82576252463fe6-0-0c03b35139da5f63e2f0b25ca52ed3ff" alt="First Place Studio" class="footer-logo">
 </a>
 <p class="mt-4 text-sm font-light text-white/30 leading-relaxed max-w-sm">Your entire marketing department, under one roof.</p>
 </div>
@@ -420,7 +425,7 @@ var EP=[
 {i:'sparkles',l:'After',t:'Extend the Impact',x:['Cinematic highlight reels','Full aftermovie production','Edited photography','Recap videos & long-form edits','Post-event social content','Promotional content for next cycle']}
 ];
 
-var BR=['LUMIERE','VERTEX','AURA','MERIDIAN','NOVA FINANCE','APEX SPORTS','ELYSIAN','PRISM','CIPHER','ATLAS'];
+var BR=['Big Boys Events','Priscila Fernandes Beauty','Essence of Brazil',"Lily's Boutique",'Perfect Solutions','Delta Painting','MOLC Contractors Ltd','Harcon Contractors Ltd','Guild Barbershop','Republic of Grill','Skillnet','VR Fitness','Breakthrough Dance Company','Beckett Page','Clare City Council','RPM Power','Brazilian Day Limerick','Brazilian Day Gorey','Link Brasil'];
 
 var WY=[
 {t:'No Vendor Fragmentation',d:'One team, one contract, one point of contact.'},
@@ -469,7 +474,7 @@ document.getElementById('ep').innerHTML=EP.map(function(p,i){
 return '<div class="ec rv '+dd[i%3]+'"><div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 rounded-full bg-accent-500/10 flex items-center justify-center"><i data-lucide="'+p.i+'" class="w-5 h-5 text-accent-500"></i></div><span class="text-[10px] tracking-[.25em] uppercase text-accent-500 font-display font-semibold">'+p.l+'</span></div><h3 class="font-display text-lg font-semibold mb-4 text-white">'+p.t+'</h3><ul class="space-y-2.5">'+p.x.map(function(x){return '<li class="flex items-start gap-2.5 text-[13px] font-light text-white/45"><i data-lucide="check" class="w-4 h-4 text-accent-500 flex-shrink-0 mt-0.5"></i><span>'+x+'</span></li>';}).join('')+'</ul></div>';
 }).join('');
 
-var bh=BR.map(function(b){return '<span class="font-display text-lg font-light text-white/90 whitespace-nowrap tracking-wider">'+b+'</span>';}).join('');
+var bh=BR.map(function(b){return '<span class="font-display text-base md:text-lg font-light text-white/90 whitespace-nowrap tracking-wider">'+b+'</span><span class="client-sep"></span>';}).join('');
 document.getElementById('m1').innerHTML=bh;
 document.getElementById('m2').innerHTML=bh;
 
