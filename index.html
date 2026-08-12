@@ -116,7 +116,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .footer-logo{height:28px;width:auto;object-fit:contain}
 .hero-badge-logo{height:22px;width:auto;object-fit:contain}
 .client-sep{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.35);flex-shrink:0}
-.hero-dirtyline{font-family:'Dirtyline',cursive;line-height:.9;letter-spacing:.01em}
+.dirtyline-word{font-family:'Dirtyline',cursive;line-height:.85;display:inline-block;vertical-align:baseline}
 @media(max-width:640px){.hsl{width:clamp(160px,40vw,220px)}.cgv{gap:.4rem}.cg{padding-right:1.5rem}.blob-1{width:350px;height:350px}.blob-2{width:280px;height:280px}.blob-3{width:200px;height:200px}.scroll-btn{width:36px;height:36px}.scroll-btn.left{left:4px}.scroll-btn.right{right:4px}.nav-logo{height:18px}.footer-logo{height:22px}.loader-logo{width:90px}.hero-badge-logo{height:16px}}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;transition-duration:.01ms !important}.mqt{animation:none}.hero-blob{animation:none}}
 </style>
@@ -163,11 +163,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 <div class="hero-blob blob-1"></div>
 <div class="hero-blob blob-2"></div>
 <div class="hero-blob blob-3"></div>
-<div class="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
+<div class="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
 <div class="inline-flex items-center justify-center px-6 py-3 rounded-full border border-[rgba(255,119,0,.25)] bg-[rgba(255,119,0,.08)] mb-8 he" style="opacity:0;transform:translateY(20px)">
 <img src="https://z-cdn-media.chatglm.cn/files/bce00fbb-6f4e-4ec1-b453-7137e9721dc9.png?auth_key=1885326200-0a8149d67c2c46b2ae82576252463fe6-0-0c03b35139da5f63e2f0b25ca52ed3ff" alt="First Place Studio" class="hero-badge-logo">
 </div>
-<h1 class="hero-dirtyline text-[clamp(2rem,5.5vw,5rem)] font-normal mb-8 text-white he" style="opacity:0;transform:translateY(30px)">
+<h1 class="font-display text-[clamp(2.5rem,7vw,6rem)] font-semibold leading-[1.05] tracking-tight mb-8 text-white he" style="opacity:0;transform:translateY(30px)">
 Your Entire Marketing<br>
 <span class="bg-gradient-to-r from-accent-400 to-accent-300 bg-clip-text text-transparent">Department.</span><br>
 Under One Roof.
@@ -191,27 +191,6 @@ Strategy. Creative. Production. Media. Growth.<br class="hidden sm:block">
 </div>
 </section>
 
-<section id="services" class="py-20 md:py-32 glow-tl">
-<div class="max-w-7xl mx-auto px-6">
-<div class="max-w-2xl mb-16 rv">
-<div class="flex items-center gap-3 mb-4"><div class="w-8 h-[2px] bg-accent-500 rounded-full"></div><p class="text-xs font-semibold tracking-[.25em] uppercase text-accent-500 font-display">Capabilities</p></div>
-<h2 class="font-display text-3xl md:text-[2.75rem] font-semibold tracking-tight mb-5 text-white leading-tight">Every Capability Your Brand Needs</h2>
-<p class="text-[15px] font-normal text-white/50 leading-relaxed">No gaps. No handoffs. A fully integrated team ready to execute.</p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="sg"></div>
-</div>
-</section>
-
-<section id="portfolio" class="py-20 md:py-32 glow-br">
-<div class="max-w-7xl mx-auto px-6">
-<div class="max-w-2xl mb-16 rv">
-<div class="flex items-center gap-3 mb-4"><div class="w-8 h-[2px] bg-accent-500 rounded-full"></div><p class="text-xs font-semibold tracking-[.25em] uppercase text-accent-500 font-display">Event Production</p></div>
-<h2 class="font-display text-3xl md:text-[2.75rem] font-semibold tracking-tight text-white leading-tight">Featured Projects</h2>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="vg"></div>
-</div>
-</section>
-
 <section id="social" class="py-20 md:py-32 glow-center">
 <div class="max-w-7xl mx-auto">
 <div class="px-6 max-w-2xl mb-12 rv">
@@ -227,6 +206,16 @@ Strategy. Creative. Production. Media. Growth.<br class="hidden sm:block">
 </div>
 </section>
 
+<section id="portfolio" class="py-20 md:py-32 glow-br">
+<div class="max-w-7xl mx-auto px-6">
+<div class="max-w-2xl mb-16 rv">
+<div class="flex items-center gap-3 mb-4"><div class="w-8 h-[2px] bg-accent-500 rounded-full"></div><p class="text-xs font-semibold tracking-[.25em] uppercase text-accent-500 font-display">Event Production</p></div>
+<h2 class="font-display text-3xl md:text-[2.75rem] font-semibold tracking-tight text-white leading-tight">Featured Projects</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="vg"></div>
+</div>
+</section>
+
 <section class="py-16 md:py-20 orange-block">
 <div class="relative z-10 max-w-7xl mx-auto px-6">
 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -235,6 +224,17 @@ Strategy. Creative. Production. Media. Growth.<br class="hidden sm:block">
 <div class="text-center rv d3"><div class="font-display text-4xl md:text-5xl font-bold text-white sn" data-t="320">0</div><div class="text-[10px] tracking-[.2em] uppercase text-white/70 mt-2 font-display font-medium">Strategic Videos</div></div>
 <div class="text-center rv d4"><div class="font-display text-4xl md:text-5xl font-bold text-white sn" data-t="98">0</div><div class="text-[10px] tracking-[.2em] uppercase text-white/70 mt-2 font-display font-medium">Retention %</div></div>
 </div>
+</div>
+</section>
+
+<section id="services" class="py-20 md:py-32 glow-tl">
+<div class="max-w-7xl mx-auto px-6">
+<div class="max-w-2xl mb-16 rv">
+<div class="flex items-center gap-3 mb-4"><div class="w-8 h-[2px] bg-accent-500 rounded-full"></div><p class="text-xs font-semibold tracking-[.25em] uppercase text-accent-500 font-display">Capabilities</p></div>
+<h2 class="font-display text-3xl md:text-[2.75rem] font-semibold tracking-tight mb-5 text-white leading-tight">Every Capability Your Brand Needs</h2>
+<p class="text-[15px] font-normal text-white/50 leading-relaxed">No gaps. No handoffs. A fully integrated team ready to execute.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="sg"></div>
 </div>
 </section>
 
@@ -282,7 +282,7 @@ Strategy. Creative. Production. Media. Growth.<br class="hidden sm:block">
 <section id="faq" class="py-20 md:py-32 glow-tl">
 <div class="max-w-3xl mx-auto px-6">
 <div class="text-center mb-16 rv">
-<div class="flex items-center justify-center gap-3 mb-4"><div class="w-8 h-[2px] bg-accent-500 rounded-full"></div><p class="text-xs font-semibold tracking-[.25em] uppercase text-accent-500 font-display">FAQ</p><div class="w-8 h-[2px] bg-accent-500 rounded-full"></div></div>
+<div class="flex items-center justify-center gap-3 mb-4"><div class="w-8 h-[2px] bg-accent-500 rounded-full"></div><p class="text-xs font-semibold tracking:[.25em] uppercase text-accent-500 font-display">FAQ</p><div class="w-8 h-[2px] bg-accent-500 rounded-full"></div></div>
 <h2 class="font-display text-3xl md:text-[2.75rem] font-semibold tracking-tight text-white leading-tight">Frequently Asked Questions</h2>
 </div>
 <div class="space-y-3 rv" id="fl"></div>
@@ -311,7 +311,7 @@ Strategy. Creative. Production. Media. Growth.<br class="hidden sm:block">
 <p class="mt-4 text-sm font-light text-white/30 leading-relaxed max-w-sm">Your entire marketing department, under one roof.</p>
 </div>
 <div>
-<h4 class="font-display text-[10px] tracking-[.2em] uppercase text-white/20 font-semibold mb-4">Navigation</h4>
+<h4 class="font-display text-[10px] tracking:[.2em] uppercase text-white/20 font-semibold mb-4">Navigation</h4>
 <ul class="space-y-3">
 <li><a href="#services" class="text-sm text-white/40 hover:text-accent-500 transition-colors duration-300">Services</a></li>
 <li><a href="#portfolio" class="text-sm text-white/40 hover:text-accent-500 transition-colors duration-300">Events</a></li>
@@ -320,7 +320,7 @@ Strategy. Creative. Production. Media. Growth.<br class="hidden sm:block">
 </ul>
 </div>
 <div>
-<h4 class="font-display text-[10px] tracking-[.2em] uppercase text-white/20 font-semibold mb-4">Contact</h4>
+<h4 class="font-display text-[10px] tracking:[.2em] uppercase text-white/20 font-semibold mb-4">Contact</h4>
 <ul class="space-y-3">
 <li><a href="mailto:firstplacestudio@outlook.com" class="text-sm text-white/40 hover:text-accent-500 transition-colors duration-300">firstplacestudio@outlook.com</a></li>
 <li><span class="text-sm text-white/40">Ireland · Europe · Brazil</span></li>
@@ -339,7 +339,7 @@ var EV=[{id:'Ori9EEyGeTM',c:'Video Production',t:'Strategy · Video · Campaign'
 var CL=[{name:'Brenno William Barber',v:['R4dIj5a5Oh0','us-C8I_rblU','QwJh4iJjAjQ']},{name:'Republic of Grill',v:['7uvREjYeSus','X5jyyIppc1g','CPbsaNaEsik','Anp3Jo4dDxM']},{name:'Delta Painting',v:['9dQ5P5L9q1s','Kp6dyELPVqU','Qd_1vgybods','H3amoCMuwOw','UQCVn_53tJM','kNkl6jWY3FE']},{name:'VR Fitness',v:['ARha0p6c7qE','led4TRiCXhQ','ponE860jhSk','UVmuYf6J8XU']},{name:'Priscila Fernandes Beauty',v:['EbpE793zq_M','gC9vo0ER8yY','esXSQhk3NrU','k45SDxcCX70']},{name:"Mark O'Loughlin Construction",v:['Cac4dNWEUz0']},{name:'Nina Chagas — House Flipping',v:['eO1FcKFlb24','CUlk8sCw9LM']}];
 var ST=[{n:'01',t:'Discovery Meeting',d:'We immerse ourselves in your business — goals, audience, positioning, competitive landscape, and communication challenges.'},{n:'02',t:'Research & Audit',d:'Deep dive into your market, competitors, audience behavior, and current performance metrics to identify every opportunity.'},{n:'03',t:'Strategic Planning',d:'A comprehensive marketing strategy tailored to your objectives. Every channel and deliverable mapped to a clear purpose.'},{n:'04',t:'Creative Development',d:'Concepts, scripts, storyboards, and visual directions are developed and refined before any production begins.'},{n:'05',t:'Production',d:'Our in-house team produces every asset — videos, photography, ad creatives, social content, reels, graphic design.'},{n:'06',t:'Execution & Launch',d:'Launch campaigns, publish content, manage channels, execute the complete strategy with surgical precision.'},{n:'07',t:'Reporting & Analysis',d:'Transparent performance reports with real data. No vanity metrics — only what matters for your bottom line.'},{n:'08',t:'Growth & Optimization',d:'Continuously monitor performance, optimize campaigns, refine communication, and scale results month after month.'}];
 var EP=[{i:'rocket',l:'Before',t:'Build Anticipation',x:['Invitations & save-the-dates','Promotional video campaigns','Social media countdown','Paid advertising & teasers','Audience engagement','Launch campaign creative']},{i:'radio',l:'During',t:'Capture Everything',x:['Professional photography','Cinematic videography','Real-time stories & reels','Live content publishing','Instant on-site editing','Real-time social management']},{i:'sparkles',l:'After',t:'Extend the Impact',x:['Cinematic highlight reels','Full aftermovie production','Edited photography','Recap videos & long-form edits','Post-event social content','Promotional content for next cycle']}];
-var BR=['Big Boys Events','Priscila Fernandes Beauty','Essence of Brazil',"Lily's Boutique",'Perfect Solutions','Delta Painting','MOLC Contractors Ltd','Harcon Contractors Ltd','Guild Barbershop','Republic of Grill','Skillnet','VR Fitness','Breakthrough Dance Company','Beckett Page','Clare City Council','RPM Power','Brazilian Day Limerick','Brazilian Day Gorey','Link Brasil'];
+var BR=['Big Boys Events','Priscila Fernandes Beauty','Essence de Brazil',"Lily's Boutique",'Perfect Solutions','Delta Painting','MOLC Contractors Ltd','Harcon Contractors Ltd','Guild Barbershop','Republic of Grill','Skillnet','VR Fitness','Breakthrough Dance Company','Beckett Page','Clare City Council','RPM Power','Brazilian Day Limerick','Brazilian Day Gorey','Link Brasil'];
 var WY=[{t:'No Vendor Fragmentation',d:'One team, one contract, one point of contact.'},{t:'Strategy-to-Execution',d:'Conceive, build, launch, optimize — end to end.'},{t:'In-House Production',d:'Every asset produced internally — quality & speed.'},{t:'Brand Consistency',d:'Perfect consistency across every channel.'},{t:'Faster Time to Market',d:'No scheduling conflicts. Everything moves faster.'},{t:'Long-Term Partner',d:'Invested in your long-term growth.'}];
 var FQ=[{q:'What does a 360° marketing agency do?',a:'Handles every aspect of communication — strategy, creative, production, advertising, social media, events, and performance optimization.'},{q:'How is First Place Studio different?',a:'We operate as your complete marketing department — strategy, creative, video, photography, social, ads, events, performance all under one roof.'},{q:'What industries?',a:'Luxury, fashion, technology, real estate, healthcare, finance, hospitality, and more.'},{q:'How long to see results?',a:'Creative deliverables in 2-3 weeks. Strategic results in 60-90 days.'},{q:"What's included?",a:'Discovery, strategy, content production, campaigns, paid ads, social management, reporting, optimization.'},{q:'Replace our in-house team?',a:'For companies without a team, we become it. For those with staff, we integrate seamlessly.'}];
 var dd=['d1','d2','d3','d4'];
@@ -349,7 +349,7 @@ document.getElementById('sg').innerHTML=SV.map(function(s,i){return '<div class=
 document.getElementById('vg').innerHTML=EV.map(function(v,i){return '<div class="vc rv '+(i%2?'d2':'d1')+'" data-vid="'+v.id+'"><div class="vw" onclick="ldE(this,\''+v.id+'\')"><img src="https://img.youtube.com/vi/'+v.id+'/maxresdefault.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy"><div class="pbo"><div class="pbc">'+PSB+'</div></div></div><div class="vinf"><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener" class="vlk" onclick="event.stopPropagation();ldE(this.closest(\'.vc\').querySelector(\'.vw\'),\''+v.id+'\')"><span class="text-[10px] tracking-[.2em] uppercase text-accent-500 font-display font-semibold">'+v.c+'</span><h3 class="font-display text-sm font-semibold mt-1.5 vt transition-colors duration-300 text-white"></h3></a><div class="flex items-center gap-3 mt-2.5"><span class="text-[11px] text-white/25 font-display">'+v.t+'</span><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener" class="text-[11px] text-accent-500/70 hover:text-accent-500 font-display font-medium transition-colors duration-300" onclick="event.stopPropagation()">YouTube →</a></div></div></div>';}).join('');
 var htk=document.getElementById('htk');CL.forEach(function(c){htk.innerHTML+='<div class="cg"><div class="cgl">'+c.name+'</div><div class="cgv">'+c.v.map(function(id){return '<div class="hsl"><div class="hvd" onclick="ldS(this,\''+id+'\')"><img src="https://img.youtube.com/vi/'+id+'/0.jpg" alt="'+c.name+'" loading="lazy"><div class="hvo"><div class="hps">'+PS+'</div></div></div></div>';}).join('')+'</div></div>';});
 document.getElementById('ps').innerHTML=ST.map(function(s,i){var l=i===ST.length-1;return '<div class="rv"><div class="flex gap-5 md:gap-8 items-start"><div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-accent-500/20 flex items-center justify-center bg-accent-500/10"><span class="font-display text-xs font-bold text-accent-500">'+s.n+'</span></div><div><h3 class="font-display text-lg md:text-xl font-semibold mb-2 text-white">'+s.t+'</h3><p class="text-sm font-light text-white/45 leading-relaxed">'+s.d+'</p></div></div></div>'+(!l?'<div class="pcn rv"></div>':'');}).join('');
-document.getElementById('ep').innerHTML=EP.map(function(p,i){return '<div class="ec rv '+dd[i%3]+'"><div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 rounded-full bg-accent-500/10 flex items-center justify-center"><i data-lucide="'+p.i+'" class="w-5 h-5 text-accent-500"></i></div><span class="text-[10px] tracking-[.25em] uppercase text-accent-500 font-display font-semibold">'+p.l+'</span></div><h3 class="font-display text-lg font-semibold mb-4 text-white">'+p.t+'</h3><ul class="space-y-2.5">'+p.x.map(function(x){return '<li class="flex items-start gap-2.5 text-[13px] font-light text-white/45"><i data-lucide="check" class="w-4 h-4 text-accent-500 flex-shrink-0 mt-0.5"></i><span>'+x+'</span></li>';}).join('')+'</ul></div>';}).join('');
+document.getElementById('ep').innerHTML=EP.map(function(p,i){return '<div class="ec rv '+dd[i%3]+'"><div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 rounded-full bg-accent-500/10 flex items-center justify-center"><i data-lucide="'+p.i+'" class="w-5 h-5 text-accent-500"></i></div><span class="text-[10px] tracking:[.25em] uppercase text-accent-500 font-display font-semibold">'+p.l+'</span></div><h3 class="font-display text-lg font-semibold mb-4 text-white">'+p.t+'</h3><ul class="space-y-2.5">'+p.x.map(function(x){return '<li class="flex items-start gap-2.5 text-[13px] font-light text-white/45"><i data-lucide="check" class="w-4 h-4 text-accent-500 flex-shrink-0 mt-0.5"></i><span>'+x+'</span></li>';}).join('')+'</ul></div>';}).join('');
 var bh=BR.map(function(b){return '<span class="font-display text-base md:text-lg font-light text-white/90 whitespace-nowrap tracking-wider">'+b+'</span><span class="client-sep"></span>';}).join('');document.getElementById('m1').innerHTML=bh;document.getElementById('m2').innerHTML=bh;
 document.getElementById('wg').innerHTML=WY.map(function(w,i){return '<div class="wc rv '+dd[i%3]+'"><h3 class="font-display text-[15px] font-semibold mb-2 text-white">'+w.t+'</h3><p class="text-[13px] font-light text-white/40 leading-relaxed">'+w.d+'</p></div>';}).join('');
 document.getElementById('fl').innerHTML=FQ.map(function(f){return '<div class="border border-white/[.06] rounded-2xl overflow-hidden bg-white/[.02]"><button class="ft w-full flex items-center justify-between p-6 text-left" aria-expanded="false"><span class="font-display text-sm font-semibold pr-4 text-white">'+f.q+'</span><i data-lucide="plus" class="w-4 h-4 text-accent-500 flex-shrink-0 fi transition-transform duration-300"></i></button><div class="fa px-6"><p class="text-[13px] font-light text-white/45 leading-relaxed pb-6">'+f.a+'</p></div></div>';}).join('');
